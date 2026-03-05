@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# This PoC uses local mock contracts to simulate the vulnerability.
+# No mainnet fork required — runs entirely locally.
+#
+# For mainnet fork reproduction, uncomment and configure:
+# eth_rpc_url = "https://bnb-mainnet.g.alchemy.com/v2/YOUR_KEY"
+# fork_block_number = 83268462
+
+evm_version = "shanghai"
+
+[profile.default.fuzz]
+runs = 256
